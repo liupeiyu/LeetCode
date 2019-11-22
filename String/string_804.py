@@ -51,3 +51,4 @@ class Solution(object):
             li.append(tmp)
 
         return set(li).__len__()
+
