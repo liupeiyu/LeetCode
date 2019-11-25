@@ -34,4 +34,26 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
+        if not strs:
+            return ""
+        s1,s2= min(strs),max(strs)
+        for i,x in enumerate(s1):
+            if x != s2[i]:
+                return s2[:i]
+        return s1
+
+if __name__ == '__main__':
+
+    s=Solution()
+
+    listparams=["aca","cba"]
+    print(s.longestCommonPrefix(listparams))
+
+
+
+
+
+
+
+
 
