@@ -14,8 +14,7 @@ class StringTestCase(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    @staticmethod
-    def test_string_14():
+    def test_string_14(self):
         object=string_14_2.Solution()
         listparams=["flower","flow","flight"]
         print(object.longestCommonPrefix(listparams))
