@@ -31,7 +31,7 @@ Explanation: The robot moves left twice. It ends up two "moves" to the left of t
 '''
 
 class Solution:
-    def judgeCircle(self, moves: str) -> bool:
+    def judgeCircle(self,moves):
         a,b,c,d=0,0,0,0
         for i in moves:
             if i=='U':
