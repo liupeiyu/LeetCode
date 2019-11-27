@@ -25,3 +25,19 @@ Output: ["h","a","n","n","a","H"]
 
 
 '''
+
+
+class Solution(object):
+    def reverseString(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        lens=s.__len__()
+        for number in range(int(lens/2)):
+            s[number],s[lens-number-1]=s[lens-number-1],s[number]
+        return s
+if __name__ == '__main__':
+    s=Solution()
+    sList=["h","e","l","l","o"]
+    print(s.reverseString(sList))

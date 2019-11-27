@@ -23,8 +23,7 @@ class Solution():
         strtmp=''
         for element in s.split(" "):
             if element!=None:
-                strtmp+=element[::-1]
-                strtmp+=" "
+                strtmp+=element[::-1]+" "
             else:
                 pass
         return strtmp.strip()
