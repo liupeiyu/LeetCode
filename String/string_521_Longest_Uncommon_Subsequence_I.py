@@ -29,4 +29,15 @@ class Solution(object):
         :type b: str
         :rtype: int
         """
+        li= lambda a, b: len(a) if len(b) < len(a) else len(b)
+        if a==b:
+            return -1
+        else:
+            return li(a,b)
 
+
+if __name__ == '__main__':
+    s=Solution()
+    astring='abda'
+    bstring='aba'
+    print(s.findLUSlength(astring,bstring))
