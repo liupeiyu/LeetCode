@@ -14,27 +14,41 @@ Given a string S, return the "reversed" string where all characters that are not
 '''
 
 
-# class Solution(object):
-    # def reverseOnlyLetters(self, S):#function
-    #     """
-    #     :type S: str
-    #     :rtype: str
-    #     """
-    #     dicts,listsparams,strparams={},[],""
-    #     lens=len(S)
-    #     for element in range(lens):
-    #         if not "a" <= S[element] <="z" and  not  "A" <=  S[element]<= "Z":
-    #             dicts[element]=S[element]
-    #         else:
-    #             listsparams.append(S[element])
-    #     listsparams=listsparams[::-1]
-    #     for key in dicts.keys():
-    #         listsparams.insert(key,dicts[key])
-    #     return ''.join(listsparams)
+class Solution(object):
+    def reverseOnlyLetters(self, S):#function
+        """
+        :type S: str
+        :rtype: str
+        """
+        dicts,listsparams,strparams={},[],""
+        lens=len(S)
+        for element in range(lens):
+            if not "a" <= S[element] <="z" and  not  "A" <=  S[element]<= "Z":
+                dicts[element]=S[element]
+            else:
+                listsparams.append(S[element])
+        listsparams=listsparams[::-1]
+        for key in dicts.keys():
+            listsparams.insert(key,dicts[key])
+        return ''.join(listsparams)
     #
 
 
-
+# class Solution:
+#     def reverseOnlyLetters(self, S: str) -> str:
+#         str_list = []
+#         not_letter_dict = {}
+#         for i, j in enumerate(S):
+#             if j.isalpha():
+#                 str_list.append(j)
+#             else:
+#                 not_letter_dict[i] = j
+#
+#         reversed_list = str_list[::-1]
+#
+#         for i in not_letter_dict.keys():
+#             reversed_list.insert(i, not_letter_dict[i])
+#         return ''.join(reversed_list)
 
 
 
