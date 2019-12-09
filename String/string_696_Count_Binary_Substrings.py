@@ -30,28 +30,21 @@ Explanation: There are 4 substrings: "10", "01", "10", "01" that have equal numb
 
 class Solution(object):
     def countBinarySubstrings(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        N = len(s)
+        pre_cnt = 0
+        pre_ch = None
+        cnt = 0
         res = 0
-        for i in range(N):
-            c1, c0 = 0, 0
-            if s[i] == "1":
-                c1 = 1
-            else:
-                c0 = 1
-            for j in range(i + 1, N):
-                if s[j] == "1":
-                    c1 += 1
-                else:
-                    c0 += 1
-                if c0 == c1:
-                    res += 1
-                    break
-        return res
 
+        for ch in s:
+            if ch == pre_ch:
+                cnt += 1
+            else:
+                res += min(pre_cnt, cnt)
+                pre_ch = ch
+                pre_cnt = cnt
+                cnt = 1
+        res += min(pre_cnt, cnt)
+        return res
 
 
 
