@@ -31,14 +31,14 @@ Output: ["let1 art can","let3 art zero","let2 own kit dig","dig1 8 1 5 1","dig2 
 
 class Solution(object):
     def reorderLogFiles(self, logs):
-        """
-        :type logs: List[str]
-        :rtype: List[str]
-        """
-        for element in logs:
-            for j in element.split():
-                print(j)
-
+        letters, digits = [], []
+        for log in logs:
+            if log.split()[1].isdigit():
+                digits.append(log)
+            else:
+                letters.append(log)
+        letters.sort(key = lambda x: (' '.join(x.split()[1:]), x.split()[0]) )
+        return letters + digits
 
 
 if __name__ == '__main__':
