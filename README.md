@@ -11,4 +11,6 @@ git 三大区域：
 工作区
 暂存区
 版本库
+git 回滚：
+git reset --hard 版本号
 `
