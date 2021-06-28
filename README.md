@@ -13,5 +13,9 @@ git 三大区域：
 版本库
 git 回滚：
 git reset --hard 版本号
-git log/reflog
+git log 回滚到之前的版本/reflog回滚到之后的版本
 `
+
+**git 分支**
+
+``
