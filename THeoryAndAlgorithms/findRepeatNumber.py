@@ -15,7 +15,7 @@
 '''
 
 class Solution:
-    def findRepeatNumber(self, nums:[list]) -> int:
+    def findRepeatNumber(self, nums:[list]) -> list:
         di={}
         result=[]
         for i in nums:
