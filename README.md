@@ -32,3 +32,28 @@ get merge
 git checkout dev 切换分支
 
 git branch -d dev 删除分支
+
+git remote add origin https://XXXXXXXXXX 别名
+
+git push  -u origin master 推送到master分支
+
+**分支合并**
+
+git merge master
+
+ 继续开发
+ 
+ git status
+ 
+ git add . 
+ 
+ git commit -m "DDD"
+**推送代码**
+git push origin dev
+
+**拉取代码**
+
+git pull origin dev
+
+
+
