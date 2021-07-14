@@ -56,4 +56,41 @@ git push origin dev
 git pull origin dev
 
 
+**总结**
+
+添加远程连接（别名）
+'''git remote add origin xxxx地址'''
+
+推送代码
+git  push origin dev
+
+下载代码
+
+git clone 地址
+
+拉去代码
+
+git pull origin dev
+
+等价于
+
+git fectch origin dev
+git merge orogin/dev
+
+保持代码提交整洁（变基）
+git rebase 分支
+
+记录图形展示
+
+git log --graph --pretty=format:"%h,%s"
+
+**解决冲突**
+下载beyond compare 软件
+git 配置  bc3 命令：
+
+ 1、git config --local merge.tool bc3
+ 2、git config --local mergetool.path "/usr/local/bin/bcomp"
+ 3、git config --local mergetool.keepBackup false
+
+
 
