@@ -5,4 +5,8 @@
 # @File    : string_max_character.py
 # @Software: PyCharm
 
-def
+def select_sort_search():
+    return
+
+def binary_sort_search():
+    return
